@@ -1,0 +1,3 @@
+enum Color1{
+  YELLOW,PINK,PURPLE,WHITE
+}
