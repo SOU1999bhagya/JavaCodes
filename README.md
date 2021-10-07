@@ -1,2 +1,0 @@
-# javacodes
-The java codes.
