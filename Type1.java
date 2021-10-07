@@ -1,0 +1,4 @@
+enum Type1{
+
+CLASSIC,GOLD,SILVER
+}

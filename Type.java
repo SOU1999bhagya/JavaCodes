@@ -1,0 +1,5 @@
+enum Type{
+
+   CHINESE,NORTH_INDIAN,ITALIAN
+
+}
