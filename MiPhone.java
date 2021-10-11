@@ -3,10 +3,10 @@ String modelName;
 float price;
 String colour;
 int imei;
+int b;
 PhonePay phonepay;
 
 void setModelName(String modelName){
-
     this.modelName=modelName;
 }
 

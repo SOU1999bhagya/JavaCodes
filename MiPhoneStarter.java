@@ -4,6 +4,7 @@ public static void main(String args[]){
 
 MiPhone miphone=new MiPhone();
 miphone.setModelName("Mi 11x");
+
 System.out.println(miphone.modelName);
 miphone.setPrice(2500.0f);
 System.out.println(miphone.price);
