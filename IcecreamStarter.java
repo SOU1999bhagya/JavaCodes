@@ -1,23 +1,31 @@
-class IcecreamStarter{
-	
-	public static void main(String args[]){
+package com.xworkz.override;
 
-Icecream cream;
- cream=new Icecream(-20,"Butterscotch",Color1.YELLOW);
-System.out.println(cream.flavour);
-System.out.println(cream.temp);
-System.out.println(cream.color);
+import com.xworkz.override.objectClasses.Icecream;
+import com.xworkz.override.objectClasses.constants.Flavour;
+import com.xworkz.override.objectClasses.constants.IceCreamType;
 
+public class IceCreamStarter {
 
- cream.type="cone";
- System.out.println(cream.type);
-cream.brand=new Brand();
-Brand brand=new Brand("Akshata",1999);
+	public static void main(String[] args) {
 
-System.out.println(brand.Ownername);
-System.out.println(brand.location);
-System.out.println(brand.since);
+		Icecream cream = new Icecream();
 
+		String cream1 = cream.toString();
+		System.out.println(cream1);
+		int cream2 = cream.hashCode();
+		System.out.println(cream2);
 
-}
+		Icecream cream3=new Icecream();
+		
+		cream3.setFlavour(Flavour.BUTTERSCOTCH);
+		cream.setFlavour(Flavour.BUTTERSCOTCH);
+		
+		
+		cream.setType(IceCreamType.CONE);
+		cream3.setType(IceCreamType.CONE);
+		
+		System.out.println(cream.equals(cream3));
+		
+	}
+
 }

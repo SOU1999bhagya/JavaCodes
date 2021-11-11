@@ -1,55 +1,44 @@
 package com.xworkz.override.objectClasses;
 
-public class Fish {
+public class Food {
 
 	private String name;
-	private String color;
 	private int price;
 	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "trr";//super.toString();
+		return "str";//super.toString();
 	}
 	
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		return 99;//super.hashCode();
+		return 30;//super.hashCode();
 	}
-	
 	
 	@Override
 	public boolean equals(Object obj) {
 		System.out.println("Invoked equals() of Object");
 		if(obj!=null) {
-			if(obj instanceof Fish) {
-				Fish fish=(Fish)obj;
-				String fish1=fish.getColor();
-				String fish2=fish.getName();
-				if(this.color.equals(fish1) && this.name.equals(fish2)){
-					System.out.println("Colour and name is matched");
+			if(obj instanceof Food) {
+				Food food=(Food)obj;
+				String food1=food.getName();
+				if(this.name.equals(food1)) {
+					System.out.println("Name is matched");
 					return true;
 				}
 				else {
 					System.err.println("Not matched");
 				}
 				
-				
 			}
-			
+				
 			
 			
 			
 		}
-		return super.equals(obj);
-	}
-	
-	public void setColor(String color) {
-		this.color = color;
-	}
-	public String getColor() {
-		return color;
+		return false;
 	}
 	
 	public void setName(String name) {
@@ -59,5 +48,4 @@ public class Fish {
 	public String getName() {
 		return name;
 	}
-	
 }

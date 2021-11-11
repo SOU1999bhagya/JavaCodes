@@ -1,5 +1,6 @@
-enum Type{
+package com.xworkz.override.objectClasses.constants;
 
-   CHINESE,NORTH_INDIAN,ITALIAN
+public enum Type {
 
+	ANALOG,DIGITAL,SMARTWATCH;
 }

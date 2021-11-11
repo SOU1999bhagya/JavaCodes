@@ -1,6 +1,6 @@
 package com.xworkz.override.objectClasses.constants;
 
-public enum Type1 {
+public enum Flavour {
 
-	BLUETOOTH,WIRED;
+	BUTTERSCOTCH,CHOCOLATE;
 }

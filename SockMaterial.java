@@ -1,6 +1,7 @@
 package com.xworkz.override.objectClasses.constants;
 
-public enum Type1 {
+public enum SockMaterial {
 
-	BLUETOOTH,WIRED;
+	NYLON,PLASTIC;
+	
 }

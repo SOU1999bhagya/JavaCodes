@@ -1,5 +1,6 @@
-enum Type2{
+package com.xworkz.override.objectClasses.constants;
 
-GENERAL_CONTRACTOR,FIELD_CONTRACTOR
+public enum Type2 {
 
+	ELECTRIC,TIDAL,WIND;
 }
