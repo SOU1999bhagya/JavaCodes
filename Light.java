@@ -1,5 +1,0 @@
-class Light{
-     
-	 boolean on;
-	 
-}

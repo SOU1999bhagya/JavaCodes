@@ -1,5 +1,0 @@
-class Machine{
-
-boolean working;
-
-}
