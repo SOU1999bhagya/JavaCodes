@@ -2,6 +2,7 @@ package com.xworkz.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Actors {
 
@@ -68,7 +69,7 @@ public class Actors {
 		String actor59 = "Ashika";
 		String actor60 = "Rachita";
 
-		Collection collection = new ArrayList();
+		Collection<String> collection = new ArrayList<String>();
 
 		collection.add(actor60);
 		collection.add(actor59);
@@ -129,6 +130,31 @@ public class Actors {
 		collection.add(actor3);
 		collection.add(actor2);
 		collection.add(actor1);
+		
+		
+		Iterator<String> itr = collection.iterator();
+
+		while (itr.hasNext()) {
+			String fun = itr.next();
+			System.out.println(fun);
+		}
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		boolean del = collection.remove(actor30);
+
+		System.out.println("The 30th value is remooved ".concat(String.valueOf(del)));
+		
+		
+		System.out.println(collection.size());
+		
+		boolean con = collection.contains("Puneeth");
+		System.out.println("The Nivea lipstick is found ".concat(String.valueOf(con)));
+
+		System.out.println("Is the list is empty " + collection.isEmpty());
+
+		collection.clear();
+
+		System.out.println("Is the lis is empty " + (collection.isEmpty()));
 
 		System.out.println(collection.size());
 

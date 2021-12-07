@@ -2,6 +2,7 @@ package com.xworkz.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Bikes {
 
@@ -57,7 +58,7 @@ public class Bikes {
 		String bike49="lohia";
 		String bike50="lambretta";
 		
-		Collection collection=new ArrayList();
+		Collection<String> collection=new ArrayList<String>();
 		
 		collection.add(bike50);
 		collection.add(bike49);
@@ -111,8 +112,41 @@ public class Bikes {
 		collection.add(bike3);
 		collection.add(bike2);
 		collection.add(bike1);
+		collection.add("Pulsar");
+		collection.add("Honda");
+		collection.add("JAWA");
+		collection.add("Royal Enfield");
+		collection.add("TVS");
+		collection.add("Harley");
+		collection.add("Unicorn");
+		collection.add("Splender");
+		collection.add("M80");
+		collection.add("Vespa");
+		
+		
+		Iterator<String> itr = collection.iterator();
+
+		while (itr.hasNext()) {
+			String fun = itr.next();
+			System.out.println(fun);
+		}
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		boolean del = collection.remove(bike30);
+
+		System.out.println("The 30th value is remooved ".concat(String.valueOf(del)));
+		
 		
 		System.out.println(collection.size());
+		
+		boolean con = collection.contains("M80");
+		System.out.println("The Nivea lipstick is found ".concat(String.valueOf(con)));
+
+		System.out.println("Is the list is empty " + collection.isEmpty());
+
+		collection.clear();
+
+		System.out.println("Is the lis is empty " + (collection.isEmpty()));
 	}
 }
 		

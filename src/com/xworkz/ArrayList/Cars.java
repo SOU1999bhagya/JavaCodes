@@ -2,12 +2,13 @@ package com.xworkz.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Cars {
 
 	public static void main(String[] args) {
 		
-Collection collection2=new ArrayList();
+Collection<String> collection2=new ArrayList<String>();
 		
 		String bike1="Honda";
 		String bike2="Indian";
@@ -110,7 +111,30 @@ Collection collection2=new ArrayList();
 		collection2.add(bike2);
 		collection2.add(bike1);
 		
+		
+		
+		Iterator<String> itr = collection2.iterator();
+
+		while (itr.hasNext()) {
+			String fun = itr.next();
+			System.out.println(fun);
+		}
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		boolean del = collection2.remove(bike30);
+
+		System.out.println("The 30th value is remooved ".concat(String.valueOf(del)));
+
 		System.out.println(collection2.size());
+		
+		boolean con = collection2.contains("Techo");
+		System.out.println("The Nivea lipstick is found ".concat(String.valueOf(con)));
+
+		System.out.println("Is the list is empty " + collection2.isEmpty());
+
+		collection2.clear();
+
+		System.out.println("Is the lis is empty " + (collection2.isEmpty()));
 		
 		
 		

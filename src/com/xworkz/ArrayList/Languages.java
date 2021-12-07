@@ -2,6 +2,7 @@ package com.xworkz.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Languages {
 
@@ -68,7 +69,7 @@ public class Languages {
 		String lang59="Konkani";
 		String lang60="Punjabi";
 
-		Collection collection=new ArrayList();
+		Collection<String> collection=new ArrayList<String>();
 		
 		collection.add(lang60);
 		collection.add(lang59);
@@ -131,6 +132,31 @@ public class Languages {
 		collection.add(lang2);
 		collection.add(lang1);
 		
+		
+		
+		Iterator<String> itr = collection.iterator();
+
+		while (itr.hasNext()) {
+			String fun = itr.next();
+			System.out.println(fun);
+		}
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		boolean del = collection.remove(lang30);
+
+		System.out.println("The 30th value is remooved ".concat(String.valueOf(del)));
+		
+		
+		System.out.println(collection.size());
+		
+		boolean con = collection.contains("M80");
+		System.out.println("The Nivea lipstick is found ".concat(String.valueOf(con)));
+
+		System.out.println("Is the list is empty " + collection.isEmpty());
+
+		collection.clear();
+
+		System.out.println("Is the lis is empty " + (collection.isEmpty()));
 		System.out.println(collection.size());
 		
 		

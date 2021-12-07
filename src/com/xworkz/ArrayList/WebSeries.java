@@ -2,6 +2,7 @@ package com.xworkz.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class WebSeries {
 
@@ -67,7 +68,7 @@ public class WebSeries {
 		String web59="The office";
 		String web60="Joey";
 		
-		Collection collection=new ArrayList();
+		Collection<String> collection=new ArrayList<String>();
 		
 		collection.add(web60);
 		collection.add(web59);
@@ -129,7 +130,31 @@ public class WebSeries {
 		collection.add(web2);
 		collection.add(web1);
 		
+		Iterator<String> itr = collection.iterator();
+
+		while (itr.hasNext()) {
+			String fun = itr.next();
+			System.out.println(fun);
+		}
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		boolean del = collection.remove(web30);
+
+		System.out.println("The 30th value is remooved ".concat(String.valueOf(del)));
+		
+		
 		System.out.println(collection.size());
+		
+		boolean con = collection.contains("TVD");
+		System.out.println("The Nivea lipstick is found ".concat(String.valueOf(con)));
+
+		System.out.println("Is the list is empty " + collection.isEmpty());
+
+		collection.clear();
+
+		System.out.println("Is the lis is empty " + (collection.isEmpty()));
+		
+		
 	}
 
 }

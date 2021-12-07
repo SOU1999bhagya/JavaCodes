@@ -2,6 +2,7 @@ package com.xworkz.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class Cities {
 
@@ -68,7 +69,7 @@ public class Cities {
 		String city59="Bellary";
 		String city60="New York";
 		
-		Collection collection=new ArrayList();
+		Collection<String> collection=new ArrayList<String>();
 		
 		collection.add(city60);
 		collection.add(city59);
@@ -131,7 +132,31 @@ public class Cities {
 		collection.add(city2);
 		collection.add(city1);
 		
+		Iterator<String> itr = collection.iterator();
+
+		while (itr.hasNext()) {
+			String fun = itr.next();
+			System.out.println(fun);
+		}
+
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		boolean del = collection.remove(city30);
+
+		System.out.println("The 30th value is remooved ".concat(String.valueOf(del)));
+		
+		
 		System.out.println(collection.size());
+		
+		boolean con = collection.contains("Bangalore");
+		System.out.println("The Nivea lipstick is found ".concat(String.valueOf(con)));
+
+		System.out.println("Is the list is empty " + collection.isEmpty());
+
+		collection.clear();
+
+		System.out.println("Is the lis is empty " + (collection.isEmpty()));
+		
+		
 					
 	}
 
